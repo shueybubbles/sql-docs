@@ -58,7 +58,9 @@ The Copy Database Wizard moves or copies databases and certain server objects ea
     -   Are marked Inaccessible, Loading, Offline, Recovering, Suspect, or in Emergency Mode.
     
     -   Have data or log files stored in Microsoft Azure storage.
-  
+
+-   If the `model` database on the destination server has object names that are the same as object names in the source database, the job is likely to fail due to `CREATE` operations failing.
+
 -   When using [FileTables](../../relational-databases/blob/filetables-sql-server.md), you can't use the Copy Database Wizard on the same server because the wizard uses the same directory name.
 
 -   A database cannot be moved or copied to an earlier version of SQL Server.
